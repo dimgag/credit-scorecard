@@ -59,3 +59,5 @@ y = # Your target variable
 model_trainer = CreditScoreModelTrainer(X, y)
 model_trainer.train_models()
 model_trainer.evaluate_models()
+
+
