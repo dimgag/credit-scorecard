@@ -53,8 +53,8 @@ class CreditScoreModelTrainer:
         print("Support Vector Machine Gini:", svm_gini)
 
 # Example usage
-X = # Your feature matrix
-y = # Your target variable
+# X = # Your feature matrix
+# y = # Your target variable
 
 model_trainer = CreditScoreModelTrainer(X, y)
 model_trainer.train_models()
