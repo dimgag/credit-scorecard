@@ -3,3 +3,6 @@
 # Ignore .DS_Store files everywhere
 
 .DS_Store
+
+# Ignore large files from data folder 
+/data/*.csv
