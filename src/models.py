@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.svm import SVC
-from sklearn.metrics import roc_auc_score, gini_score
+from sklearn.metrics import roc_auc_score #, gini_score
 from sklearn.model_selection import train_test_split
 
 class CreditScoreModelTrainer:
@@ -56,55 +56,55 @@ class CreditScoreModelTrainer:
 # X = # Your feature matrix
 # y = # Your target variable
 
-model_trainer = CreditScoreModelTrainer(X, y)
-model_trainer.train_models()
-model_trainer.evaluate_models()
+# model_trainer = CreditScoreModelTrainer(X, y)
+# model_trainer.train_models()
+# model_trainer.evaluate_models()
 
 
 
-# Create a LogisticRegression model
-from sklearn.linear_model import LogisticRegression
-logreg = LogisticRegression()
+# # Create a LogisticRegression model
+# from sklearn.linear_model import LogisticRegression
+# logreg = LogisticRegression()
 
-# Train the model using the training sets
-logreg.fit(X_train, y_train)
+# # Train the model using the training sets
+# logreg.fit(X_train, y_train)
 
-# Make predictions using the testing set
-logreg_pred = logreg.predict(X_test)
+# # Make predictions using the testing set
+# logreg_pred = logreg.predict(X_test)
 
-# Calculate Gini coefficient
-from sklearn.metrics import roc_auc_score, gini_score
-logreg_gini = gini_score(y_test, logreg_pred)
+# # Calculate Gini coefficient
+# from sklearn.metrics import roc_auc_score, gini_score
+# logreg_gini = gini_score(y_test, logreg_pred)
 
-auc = roc_auc_score(y_test, logreg_pred)
-accuracy = logreg.score(X_test, y_test)
+# auc = roc_auc_score(y_test, logreg_pred)
+# accuracy = logreg.score(X_test, y_test)
 
 
-# Print evaluation results
-print("Logistic Regression Gini:", logreg_gini)
-print("Logistic Regression AUC:", auc)
+# # Print evaluation results
+# print("Logistic Regression Gini:", logreg_gini)
+# print("Logistic Regression AUC:", auc)
 
-# Plot AUC curve
-from sklearn.metrics import roc_curve
-fpr, tpr, thresholds = roc_curve(y_test, logreg_pred)
-plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % auc)
-plt.plot([0, 1], [0, 1], 'k--')
-plt.xlim([0.0, 1.05])
-plt.ylim([0.0, 1.05])
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.legend(loc="lower right")
-plt.show()
+# # Plot AUC curve
+# from sklearn.metrics import roc_curve
+# fpr, tpr, thresholds = roc_curve(y_test, logreg_pred)
+# plt.plot(fpr, tpr, label='Logistic Regression (area = %0.2f)' % auc)
+# plt.plot([0, 1], [0, 1], 'k--')
+# plt.xlim([0.0, 1.05])
+# plt.ylim([0.0, 1.05])
+# plt.xlabel('False Positive Rate')
+# plt.ylabel('True Positive Rate')
+# plt.legend(loc="lower right")
+# plt.show()
 
-# Make confusion matrix
-from sklearn.metrics import confusion_matrix
-confusion_matrix(y_test, logreg_pred)
+# # Make confusion matrix
+# from sklearn.metrics import confusion_matrix
+# confusion_matrix(y_test, logreg_pred)
 
-# Print classification report
-from sklearn.metrics import classification_report
-print(classification_report(y_test, logreg_pred))
+# # Print classification report
+# from sklearn.metrics import classification_report
+# print(classification_report(y_test, logreg_pred))
 
-# Print feature importance
-print(logreg.coef_)
-print(logreg.intercept_)
-print(list(zip(X.columns, logreg.coef_[0])))
+# # Print feature importance
+# print(logreg.coef_)
+# print(logreg.intercept_)
+# print(list(zip(X.columns, logreg.coef_[0])))
