@@ -16,3 +16,17 @@ class FeatureSelector(BaseEstimator, TransformerMixin):
         X_new = X.loc[:, '']
         return X_new
     
+
+
+class BinningTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self, bins):
+        self.bins = bins
+
+    def fit(self, X, y=None):
+        self.X_fit_ = X
+        return self
+
+    def transform(self, X, y=None):
+        X_binned = pd.cut(X, bins=self.bins, labels=False)
+        return X_binned.values.reshape(-1, 1)
+…
