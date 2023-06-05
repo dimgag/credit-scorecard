@@ -6,5 +6,8 @@
 
 # Ignore large files from data folder 
 /data/*.csv
+/data/*.xlsx
 
+
+# Exclude the template.ipynb file from the repository
 template.ipynb
