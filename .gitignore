@@ -6,3 +6,5 @@
 
 # Ignore large files from data folder 
 /data/*.csv
+
+template.ipynb
