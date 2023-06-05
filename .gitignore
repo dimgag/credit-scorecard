@@ -12,3 +12,5 @@
 /data/*
 
 # Ignore large files from data folder
+
+docs/*
