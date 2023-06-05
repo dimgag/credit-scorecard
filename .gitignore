@@ -9,8 +9,11 @@
 /data/Dataset-case.xlsx
 
 # ignore everything from data folder 
-/data/*
+data/*
 
 # Ignore large files from data folder
 
 docs/*
+
+# ignore the template file
+template.ipynb
