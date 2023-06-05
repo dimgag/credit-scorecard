@@ -6,10 +6,10 @@
 # Ignore large files from data folder 
 /data/*.csv
 /data/*.xlsx
-/data/Dataset-case.xlsx
+
 
 # ignore everything from data folder 
-data/*
+# data/*
 
 # Ignore large files from data folder
 
