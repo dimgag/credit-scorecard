@@ -1,13 +1,14 @@
 # Github - ignore file 
 
 # Ignore .DS_Store files everywhere
-
 .DS_Store
 
 # Ignore large files from data folder 
 /data/*.csv
 /data/*.xlsx
+/data/Dataset-case.xlsx
 
+# ignore everything from data folder 
+/data/*
 
-# Exclude the template.ipynb file from the repository
-template.ipynb
+# Ignore large files from data folder
